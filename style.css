@@ -1,3 +1,35 @@
-main{
-	
+body{
+	font-family: Verdana, Arial, 'Times New Roman';
+	color: rgb(40,55,71);
+	background-color: rgb(243,243,243);
+	margin: 0;
+}
+
+header, footer{
+	background-color: ;
+}
+
+header ul{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	list-style-type: none;
+	text-align: center;
+}
+
+footer dl{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer dt{
+	text-align: center;
+	width: 50%;
+	padding: 0;
+	margin: 0;
+}
+
+footer dd{
+	width: 50%;
+	padding: 0;
+	margin: 0;
 }
