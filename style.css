@@ -6,7 +6,13 @@ body{
 }
 
 header, footer{
-	background-color: ;
+	background-color: SlateGrey;
+}
+
+header h1{
+	text-align: center;
+	font-size: 2em;
+	margin: 0;
 }
 
 header ul{
@@ -14,6 +20,17 @@ header ul{
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	list-style-type: none;
 	text-align: center;
+	margin: 10;
+	background-color: DarkSlateBlue;
+}
+
+main{
+	margin: 5%;
+}
+
+
+footer{
+	color: Black;
 }
 
 footer dl{
@@ -22,9 +39,8 @@ footer dl{
 }
 
 footer dt{
-	text-align: center;
-	width: 50%;
-	padding: 0;
+	text-align: right;
+	padding-right: 10px;
 	margin: 0;
 }
 
