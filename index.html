@@ -1,49 +1,62 @@
-<!DOCTYPE html>
-	<head>
-		<meta charset="utf-8">
-		<title>Hem</title>
-		<link href="style.css" rel="stylesheet">
+<!DOCTYPE html> <!--säger att det är ett html dok, till för webbläsarens skull-->
+	<HTML lang="sv"> <!--html dok med svenskt språk-->
+		
+	<head> <!-- allting som inte ses på sidan-->
+		<meta charset="utf-8"> <!--Teckenkodning utf-8-->
+		<title>Hem</title> <!-- titeln på taben, olika namn på varje sida-->
+		<link href="style.css" rel="stylesheet"> <!-- länk till CSS dok.-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--sätter upp viewport som ändrar utseendet beroende på enhetens skärmstorlek. -->
 	</head>
 	
-	<body>
-		<header>
-			<h1>
+	<body> <!-- allt som ses på sidan-->
+		<header> <!--översta delen på sidan och till för huvudrubrik-->
+			<h1> <!-- huvudrubrik. överst på varje sida bara annorlunda text-->
 				Välkommen!
 			</h1>
-			<ul>
-				<li>
-					<a href="index.html">Hem</a>
-				</li>
-				<li>
-					<a href="esport.html">Om E-sport</a>
-				</li>
-				<li>
-					<a href="players.html">Kända spelare</a>
-				</li>
-				<li>
-					<a href="forms.html">Formulär</a>
-				</li>
 		</header>
 		
-		<main>
-			<h2> 
+		<nav> <!-- global meny-->
+			<ul> <!--inte ordnad lista med punkter-->
+				<li> <!-- varje rad startas med li-->
+					<a href="index.html">Hem</a> <!-- länk till startsida-->
+				</li>
+				<li>
+					<a href="esport.html">Om E-sport</a> <!-- länk till om e-sport-->
+				</li>
+				<li>
+					<a href="players.html">Kända spelare</a> <!-- länk till kända spelare-->
+				</li>
+				<li>
+					<a href="forms.html">Formulär</a> <!--länk till ett formulär-->
+				</li>
+			</ul>
+		</nav>  <!--Header, Nav och Footer är likadana på alla sidor. Därför kommentarer om dessa bara på index.html-->
+		
+		<main> <!--huvudinnehållet på sidan-->		
+			<h2> <!--h2,h3,h4 är vanliga rubriker, medans h1 är huvudrubrik-->
 				Om denna webbplatsen
 			</h2>
-			<p>
-				Denna webbsidan handlar om E-sport med fokus på spelet League of Legends. Det är menat att sidan ska vara informativ till folk med erfarenhet men även dem med inga tidigare erfarenheter. 
-				<br> Informationen som finns på sidan handlar om League of Legends, dess historia, kända spelare och kända tillfällen. All information på denna sidan kommer ifrån <a href="https://en.wikipedia.org/wiki/Esports">Wikipedia</a>.
+			<figure> <!--märkerar en bild i ett dok.-->
+				<img src="bilder/world.jpg" alt="Worlds 2019 Finals"> <!--själva bilden med länk, alt är en beskrivning ifall bilden inte laddar eller för talsyntes-->
+				<figcaption>2019 Worlds Finals Paris</figcaption> <!--figcaption används för att skriva bildtext-->
+			</figure>
+			<p> <!--Vanlig text-->
+				Denna webbsidan handlar om E-sport med fokus på spelet League of Legends. Det är menat att sidan
+				ska vara informativ till folk med erfarenhet men även dem med inga tidigare erfarenheter. 
+				Informationen som finns på sidan handlar om League of Legends, dess historia och kända spelare.
 			</p>
-			
-			<img src="bilder/world.jpg" alt="">
+			<p> <!-- nytt text stycke med länk till extern sida-->
+				All information kommer ifrån <a href="https://en.wikipedia.org">Wikipedia</a>.
+			</p>
 		</main>
 		
-		<footer>
-			<dl>
-				<dt>
+		<footer> <!--sidans fotnot med länkar till andra sidor fast med beskrivningar-->
+			<dl> <!-- beskrivnings lista-->
+				<dt> <!-- sätter upp namn/rad, i detta fall länkar till andra delar av webbsidan-->
 					<a href="index.html">Hem</a>
 				</dt>
-				<dd>
-					Webbplatsens hemsida som beskriver om sidans syfte.
+				<dd> <!-- beskriver en del av ovanstående stycke, finns flera dt och dl i varje footer.  -->
+					Webbplatsens hemsida som beskriver sidans syfte.
 				</dd>	
 				<dt>
 					<a href="esport.html">Om E-sport</a>
@@ -61,9 +74,9 @@
 					<a href="forms.html">Formulär</a>
 				</dt>
 				<dd>
-					Fråga till användarens åsikt över E-sport och spelet.
+					Fråga till användarens åsikt om E-sport.
 				</dd>
 			</dl>
 		</footer>
-</body>
+	</body>
 </html>
