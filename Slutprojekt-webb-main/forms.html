@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+	<HTML lang="sv">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Formulär</title>
+		<link href="style.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+		<header>
+			<h1>
+				Vad tycker du?
+			</h1>
+		</header>
+		
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Hem</a>
+				</li>
+				<li>
+					<a href="esport.html">Om E-sport</a>
+				</li>
+				<li>
+					<a href="players.html">Kända spelare</a>
+				</li>
+				<li>
+					<a href="forms.html">Formulär</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<main>
+			<h2>
+				Dela din åsikt
+			</h2>
+
+			<form action="contact.php" method="post"> <!--startar ett formulär, action är vart det ska skickas, metoden är post pga lösenord och säkrare än get-->
+				<fieldset> <!--Grupperar ihop flera element i ett formulär-->
+					<legend>Uppgifter</legend> <!--titel på ett fieldset-->
+					<p>
+						<label for="user">Användarnamn: <!--label är en text i formulär, i detta fall för "user". Används för talsyntes och kan användas för att fylla i boxen för "user".-->
+							<strong class="required" title="Obligatorisk">*</strong> <!-- Visar att detta är obligatoriskt att fylla i -->
+						</label>
+						<input type="text" name="user" id="user" required /> <!--visar vilket input detta är, i detta fall "text" som är obligatoriskt fält pga required-->
+					</p> <!--name är namnet på formuläret, används också efter formuläret skickas in. id är för att hitta element efter inskickning.-->
+					<p>
+						<label for="user-pwd">Lösenord:
+							<strong class="required" title="Obligatorisk">*</strong>
+						</label>
+						<input type="password" name="user-pwd" id="user-pwd" required /> <!--lösenords input som är obligatoriskt-->
+					</p>
+					<p>
+						<label for="mail">Email:
+							<strong class="required" title="Obligatorisk">*</strong>
+						</label>
+						<input type="email" name="mail" id="mail" required /> <!--email input som också är obligatoriskt-->
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Ålder och Kön</legend>
+					<p>
+						<input type="radio" name="age" id="zoomer"/> <!--radio är cirkulära knappar som bara går att fylla i en i taget-->
+						<label for="zoomer">20-</label>					
+					</p>
+					<p>
+						<input type="radio" name="age" id="millenial"/>
+						<label for="millenial">21-30</label>				
+					</p>
+					<p>
+						<input type="radio" name="age" id="genx"/>
+						<label for="genx">31-50</label>				
+					</p>
+					<p>
+						<input type="radio" name="age" id="boomer"/>
+						<label for="boomer">50+</label>				
+					</p>
+					
+					<select name="dropdown"> <!--Klickar man på dropdown visas flera alternativ som går att välja-->
+						<option value="" selected>Välj ditt kön </option> 
+						<option value="Male">Man</option> <!--value är vilket värde man valt, detta värdet väljs automatiskt pga "selected"-->
+						<option value="Female">Kvinna</option>
+						<option value="Other">Annat</option>
+					</select>
+
+					<input type="hidden" id="hidden" name="hidden"> <!--gömt input fält som inte går att se i dok. -->
+				</fieldset>
+
+				<fieldset> 
+					<legend>Vilket/vilka spel har du spelat eller hört talas om?</legend>
+					<p>
+						<input type="checkbox" name="game" id="lol" checked /> <!--checkbox går att fylla i flera, i stort sett alla som visas. detta är automatiskt infyllt pga "checked"-->
+						<label for="lol">League of Legends</label>					
+					</p>
+					<p>
+						<input type="checkbox" name="game" id="cs" />
+						<label for="cs">Counter Strike</label>					
+					</p>
+					<p>
+						<input type="checkbox" name="game" id="dota" />
+						<label for="dota">Dota 2</label>						
+					</p>
+					<p>
+						<input type="checkbox" name="game" id="cod" />
+						<label for="cod">Call of Duty</label>						
+					</p>
+					<p>
+						<input type="checkbox" name="game" id="rl" />
+						<label for="rl">Rocket League</label>						
+					</p>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Positiv eller negativ upplevelse till esport?</legend>
+					<p>
+						<input type="radio" name="exp" id="positive" />
+						<label for="positive">Positiv</label>						
+					</p>
+					<p>
+						<input type="radio" name="exp" id="negative" />
+						<label for="negative">Negativ</label>						
+					</p>
+					<p>
+						<input type="radio" name="exp" id="ingen" />
+						<label for="ingen">Ingen åsikt</label>					
+					</p>
+					<p>
+						<label for="else">Övrigt:</label>
+						<textarea name="else" id="else" placeholder="Övriga åsikter"></textarea> <!--textområde där användaren kan skriva vadsomhelst, "placeholder" är den text som visas om den inte är ifylld-->
+					</p>
+				</fieldset>
+
+				<input type="submit"/>	<!--skicka in knapp-->
+			</form>	
+
+			<table> <!--tabell-->
+				<tr> <!-- skapar en rad i tabell -->
+					<th>Allmänt om</th> <!-- th är rubrik i tabeller-->
+					<th>League of Legends</th>
+				</tr>
+				<tr> 
+					<td>Släpptes:</td> <!-- td är vanlig text i tabeller-->
+					<td>2009</td>
+				</tr>
+				<tr>
+					<td>Utvecklare:</td>
+					<td>Riot Games</td>
+				</tr>
+				<tr>
+					<td>Genre:</td>
+					<td>MOBA</td>
+				</tr>
+				<tr>
+					<td>Lanes:</td>
+					<td>
+						<div>Top</div> <!--sätts in i divs för att skapa radavstånd-->
+						<div>Jungle</div>
+						<div>Mid</div>
+						<div>Bot</div>
+						<div>Support</div>
+					</td>
+				</tr>
+			</table>
+		</main>
+		
+		<footer>
+			<dl>
+				<dt>
+					<a href="index.html">Hem</a>
+				</dt>
+				<dd>
+					Webbplatsens hemsida som beskriver sidans syfte.
+				</dd>	
+				<dt>
+					<a href="esport.html">Om E-sport</a>
+				</dt>
+				<dd>
+					Beskrivning om E-sport och dess historia, även en förklaring om League of Legends.
+				</dd>
+				<dt>
+					<a href="players.html">Kända spelare</a>
+				</dt>
+				<dd>
+					Kända spelare uppdelat på olika "lanes".
+				</dd>
+				<dt>
+					<a href="forms.html">Formulär</a>
+				</dt>
+				<dd>
+					Fråga till användarens åsikt om E-sport.
+				</dd>
+			</dl>
+		</footer>
+	</body>
+</html>

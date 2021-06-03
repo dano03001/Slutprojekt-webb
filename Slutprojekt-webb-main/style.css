@@ -1,0 +1,289 @@
+body{/**body är allt som ses i dokumentet**/
+	font-family:'Trebuchet MS', Arial, 'Times New Roman', sans-serif; /**fontstack, använder 'trebuchet ms' om det inte går används nästa font i stacken **/
+	background-color: rgb(243,243,243); /**vit bakgrundsfärg i rgb**/
+	margin: 0; /**utrymme mellan element, i detta fall inget utrymme mellan elementen**/
+	display: grid; /**visar att det finns en grid**/
+	grid-template-columns: 5vw 1fr 1fr 5vw; /**antalet columner med dess respektiva storlekar, 1vw är relativt till 1% av skärmstorlekens bredd, 1fr är en del av det tillgängliga utrymmet**/
+	grid-template-rows: 8vh 10vh 1fr 20vh; /**antalet rader med dess respektiva storlekar, 1vh är relativt till 1% av skärmstorlekens höjd**/
+	grid-template-areas: /**grid områdernas namn**/
+	'. header header .'
+	'. nav nav .'
+	'. main main .'
+	'. footer footer .';
+}
+
+header{/**området header**/
+	grid-area: header; /**gridområde header**/
+	background-color:rgb(40,55,71); /**svart bakgrundsfärg i rgb**/
+	padding-bottom:5px; /**padding skapar område runt elementet, i detta fall 5px på bottnen**/
+	padding-top:5px;/**5px avstånd på toppen**/
+	border-radius:1px; /**rundade hörn**/
+	margin:0;/**utrymme mellan element, i detta fall inget utrymme mellan elementen**/
+}
+
+h1{ /**huvudrubrik**/
+	font-family: Verdana, Arial, 'Times New Roman', sans-serif; /**fontstackar för huvudrubriker, utgår på verdana ifall det inte går nästa font i stacken**/
+	text-align: center; /**centrerad text**/
+	font-size: 2em; /**text storlek, 2em är dubbelt så stor text 1em är vanlig storlek**/
+	margin: 0;/**utrymme mellan element, i detta fall inget utrymme mellan elementen**/
+	color: rgb(243,243,243); /**färg på text, i detta fall vit**/
+	text-decoration:underline;/**text dekoration, underlinje på huvudrubrik**/
+}
+
+nav{/**globala menyn i nav**/
+	grid-area: nav;/**gridområde nav**/
+	background-color: rgb(40,55,71); /**svart bakgrundsfärg i rgb**/
+	border-radius: 3px; /**rundade hörn**/
+
+}
+
+nav ul{ /**oordnad lista i nav**/
+	display: grid;/**grid för navigation**/
+	grid-template-columns: 1fr 1fr 1fr 1fr; /**skapar en layout för griden**/
+	list-style-type: none; /**inga punkter eller nåt sånt på listan**/
+	text-align: center; /**centrerad text**/
+	padding-bottom: 5px; /**avstånd på botten med 5px**/
+	padding-top: 5px; /**avstånd på toppen med 5px**/
+}
+
+nav a{ /**länkar i nav **/
+	color:rgb(243,243,243); /**länkarnas färg, i detta fall vit**/
+	font-size:1.25em; /**större textstorlek**/
+	text-decoration:none;/**tar bort underlinje**/
+	padding: 10px 30px;/**större länk, 10px avstånd på toppen och botten, 30px på vänster och höger **/
+	border-radius:3px;/**rundade hörn**/
+	border: 1px solid rgb(243,243,243); /**visar elementets gräns i en vit färg**/
+}
+
+nav a:hover{ /**muspekare är över en länk i nav**/
+	background-color:rgb(147,36,50);/**när muspekaren är över länken ändras bakgrundsfärgen till röd**/
+}
+
+h2, h3, h4{ /**alla rubriker**/
+	color:rgb(60,24,116); /**textfärg blir lila**/
+	font-size: 1.5em; /**större textstorlek**/
+}
+
+main{/**huvudområdet**/
+	grid-area: main;/**gridområdet main**/
+	background-color: rgb(243,243,243);/**vit bakgrundsfärg**/
+	color:rgb(40,55,71)/**svart textfärg**/
+}
+
+div>ul{/** oordande listor i en div**/
+	list-style-type: none;/**inga punkter eller nåt sånt på listan**/
+	float:left;/**listan ska ligga till vänster**/
+}
+
+div>ul>li{/**listdelar i en oordnad lista i en div**/
+	margin-top: 75px;/**75px avstånd på toppen **/
+}
+
+div>ul>li:first-child{ /**den första raden på oordnad listan ska ha mindre avstånd än de andra**/
+	margin-top: 20px; /**avstånd på toppen**/
+}
+
+div>ul>li>a:hover{
+	background-color: rgb(147,36,50); /**när muspekaren är över länken blir bakgrundsfärgen röd**/
+	border-radius: 15px; /**rundat hörn**/
+}
+
+.spelarebild{
+	float:left; /**bilden ska ligga till vänster**/
+	max-width: 295px;/**inte för stor bild, maximala bredd**/
+	max-height: 233px;/**inte för stor bild, maximala höjd**/
+}
+
+main>div>ol{
+	margin-bottom:8vh; /**avstånd på botten**/
+	margin-left:6vw;/**avstånd till vänster**/
+	font-size: 1.1em;/**större textstorlek**/
+}
+
+#vline{ /**vertikal linje som är bara till för utseende**/
+	border-left: 1px solid rgb(40,55,71); /**skapar en linje**/
+	height: 600px;/**linjens höjd**/
+	float: left;/**den ska ligga till vänster**/
+	margin: 25px 0 25px 20px; /**25px avstånd på toppen, 0 till höger, 25px avstånd på bottnen, 20px avstånd till vänster. Till för att den ska passa in bättre**/
+}
+
+.hline{/** horizontell linje som är bara till för utseende**/
+	border-bottom: 1px solid rgb(40,55,71);/**skapar en linje**/
+	width:90vw;/**linjens bredd, samma bredd som sidans bredd**/
+}
+
+#first{
+	margin-top: 10vh;/**avstånd på toppen 10vh**/
+	margin-left: 15vw;/**avstånd till vänster 15vw**/
+}
+
+#second{
+	font-size: 2ex;/**textstorlek, relativt till x-höjden**/
+}
+
+figure{
+	float: right;/**ska ligga till höger**/
+	margin-left: 20px;/**avstånd till vänster 20px**/
+	margin-bottom: 3vh;/**avstånd på bottnen 3vh**/
+}
+
+figure>img{
+	max-width: 40vw;/** max bredd 40vw**/
+	max-height: 70vh;/**max höjd 70vh**/
+	border-radius: 5px;/**rundade hörn**/
+}
+
+section>figure{
+	float:left;/**ska ligga till vänster**/
+	width:30%;/**mindre strolek, bredd 30%**/
+}
+#expl{
+	width:60%; /**mindre storlek, bredd 60% **/
+	float:left;/**ska ligga till vänster**/
+}
+
+#h3esports{
+	text-align: center;/**centrerad text**/
+}
+
+#mp3{
+	margin-top:50px; /**avstånd på toppen 50px**/
+	margin-bottom: 50px;/**avståmd på bottnen 50px**/
+}
+
+iframe{
+	width: 427px;/**fixerad storlek på alla iframes, bredd 427 px**/
+	height: 240px; /**fixerad storlek på alla iframes, höjd 240 px**/
+	border: none;/**visa inga gränser på iframes**/
+}
+
+#text{
+	margin-left: 300px;/**avstånd till vänster 300 px**/
+}
+
+label{
+	padding: 5px 0 5px 0;/**avstånd under och över labels 5px**/
+	display: inline-block; /**visar detta som ett inline-block, kan ändra bredd och höjd**/
+	vertical-align: top;/**bestämmer placering på höjden, i detta fall högst upp**/
+	width: 125px;/**bredd på alla labels**/
+}
+
+fieldset{
+	margin-bottom: 20px;/**avstånd på bottem , för att skapa utrymme mellan alla fieldsett**/
+	border-radius: 5px;/**rundade hörn**/
+}
+
+legend{
+	font-size: 1.1em;/**lite större textstorlek**/
+}
+
+textarea{
+	width:200px;/**bredden på textareas**/
+	height:100px;/**höjden på textareas**/
+	border: 1px solid black;/**visa gränsen på textareas i svartfärg**/
+	border-radius:3px;/**rundade hörn**/
+	resize:vertical;/**användaren kan ändra textareans höjd**/
+}
+
+input[type=submit]{
+	background-color:#DE354C;/**skicka in ska ha röd bakgrundsfärg**/
+	color:white;/**vit text färg**/
+	padding: 20px 30px;/**större yta på skicka in**/
+	border:none; /**tar bprt gränsen på skicka in**/
+	border-radius:4px;/**rundade hörn**/
+	cursor:pointer;/**när muspekaren är över skicka in ändras den till länkpekare**/
+}
+
+input[type=submit]:hover{
+	background-color:#932432;/**när muspekaren är över skicka in ändras bakgrundsfärgen till en mörkare röd, är i hexadecimal färg**/
+}
+
+form{
+	border-radius: 5px;/**rundade hörn**/
+	background-color:ghostwhite;/**annan bakgrundsfärg än vanligt på formulär**/
+	padding: 20px;/**större yta på formulär, såg bättre ut**/
+	float:left; /**ska ligga till vänster**/
+	width: 50%;/**minskad bredd på formuläret, till för att tabell ska få plats till höger**/
+}
+
+table,th,td{
+	border: 1px solid rgb(40,55,71);/**gränserna ska visas i en svart färg.**/
+	border-collapse: collapse;/**ska bara vara en linje, utan denna hade det varit två**/
+	width:30%;/**minskad bredd på tabell, till för att tabellen ska få plats till höger om formuläret**/
+	border-radius: 3px;/**rundade hörn**/
+	padding: 20px;/**större områden på tabellen**/
+}
+
+tr:nth-child(even){
+	background-color: rgb(243,243,243);/**jämna rader ska vara vita i tabellen**/
+}
+
+tr:nth-child(odd){
+	background-color: rgb(222,53,76);/**ojämna rader ska vara röda i tabellen**/
+	color: rgb(234,234,234);/**lättare att läsa i vit färg **/
+}
+tr:nth-child(1){
+	background-color: rgb(60,24,116);/**första raden i tabellen ska vara lila i bakgrunden**/
+	color: rgb(234,234,234);/**lättare att läsa i vit färg**/
+}
+
+footer{
+	grid-area: footer;/**gridområde footer**/
+	border-radius: 3px;/**rundade hörn**/
+	background-color: rgb(40,55,71);/**mörk bakgrundsfärg**/
+}
+
+footer dl{
+	display: grid;/**visar grid**/
+	grid-template-columns: 1fr 1fr 1fr 1fr;/** 4 kolumner på griden**/
+}
+
+footer a{
+	color:rgb(222,53,76);/**länkar ska vara röda**/
+	font-size:1.25em;/**större storlek på länkar**/
+	text-decoration: none;/**inga dekorationer på länkar som underlinjer**/
+}
+
+footer a:hover{
+	text-decoration:underline;/**när muspekaren är över länken blir det en underlinje**/
+	font-size:1.3em;/**textstorleken blir lite större när muspekaren är över**/
+}
+
+footer a:active{
+	color:rgb(147,36,50);/**när man trycker på länken blir den en mörkare röd**/
+}
+
+footer dt{
+	text-align: right;/**länk i dt ska ligga till höger**/
+	margin: 10px;/**större område på länken i footer**/
+}
+
+footer dd{
+	color:rgb(243,243,243);/**textfärg i dd ska vara vit**/
+	padding:5px; /**större yta på texten**/
+	margin:0; /**inget avstånd till andra element**/
+}
+
+@media screen and (max-width: 600px)/**när enhetens skärmsbredd är mindre än 600 px gäller dessa CSS regler**/
+{
+	body{
+		display: grid;/**visar grid**/
+		grid-template-columns: 5vw 1fr 1fr 5vw;/**kolumnerna är ändrade för att passa mindre skärmstorlekar**/
+		grid-template-rows: 50px 120px 1fr 300px;/**raderna är ändrade för att passa mindra skärmstorlekar**/
+		grid-template-areas: 
+		'. header header .'
+		'. nav nav .'
+		'. main main .'
+		'. footer footer .';
+	}
+
+	nav ul{
+		display: grid;/**visar grid**/
+		grid-template-columns: 1fr 1fr;/**global menyn är bättre anpassad för mindre skärmstorlekar**/
+		grid-template-rows: 50px 50px;/**nu ligger länkarna i 2x2 istället för 4x1**/
+	}
+
+	main>div>ol>li{
+		margin-left:70px;/**passar bättre in på mindre skärmar**/
+	}
+}
