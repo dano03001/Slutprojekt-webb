@@ -59,7 +59,7 @@ nav a:hover{ /**muspekare är över en länk i nav**/
 	background-color:rgb(147,36,50);/**när muspekaren är över länken ändras bakgrundsfärgen till röd**/
 }
 
-h2, h3, h4{ /**alla rubriker**/
+h2, h3{ /**alla rubriker**/
 	color:rgb(60,24,116); /**textfärg blir lila**/
 	font-size: 1.5em; /**större textstorlek**/
 }
@@ -68,6 +68,10 @@ main{/**huvudområdet**/
 	grid-area: main;/**gridområdet main**/
 	background-color: rgb(243,243,243);/**vit bakgrundsfärg**/
 	color:rgb(40,55,71)/**svart textfärg**/
+}
+
+#wiki{
+	font-size: 1.2rem; /**större textstorlek, rem är relativt till rot elementet så 1,2 gånger större än ovanstående text**/
 }
 
 div>ul{/** oordande listor i en div**/
@@ -219,7 +223,7 @@ tr:nth-child(even){
 }
 
 tr:nth-child(odd){
-	background-color: rgb(222,53,76);/**ojämna rader ska vara röda i tabellen**/
+	background-color: hsl(352,72%,54%);/** hsl är hue,saturation och lightness. ojämna rader ska vara röda i tabellen**/
 	color: rgb(234,234,234);/**lättare att läsa i vit färg **/
 }
 tr:nth-child(1){

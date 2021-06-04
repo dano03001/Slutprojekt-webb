@@ -63,19 +63,19 @@
 				<fieldset>
 					<legend>Ålder och Kön</legend>
 					<p>
-						<input type="radio" name="age" id="zoomer"/> <!--radio är cirkulära knappar som bara går att fylla i en i taget-->
+						<input type="radio" name="age" id="zoomer" value="20-"/> <!--radio är cirkulära knappar som bara går att fylla i en i taget, value är det första värdet som sen kan ändras-->
 						<label for="zoomer">20-</label>					
 					</p>
 					<p>
-						<input type="radio" name="age" id="millenial"/>
+						<input type="radio" name="age" id="millenial" value="21-30"/>
 						<label for="millenial">21-30</label>				
 					</p>
 					<p>
-						<input type="radio" name="age" id="genx"/>
+						<input type="radio" name="age" id="genx" value="31-50"/>
 						<label for="genx">31-50</label>				
 					</p>
 					<p>
-						<input type="radio" name="age" id="boomer"/>
+						<input type="radio" name="age" id="boomer" value="50+"/>
 						<label for="boomer">50+</label>				
 					</p>
 					
@@ -86,29 +86,29 @@
 						<option value="Other">Annat</option>
 					</select>
 
-					<input type="hidden" id="hidden" name="hidden"> <!--gömt input fält som inte går att se i dok. -->
+					<input type="hidden" id="hidden" name="hidden" value="hidden"> <!--gömt input fält som inte går att se i dok. -->
 				</fieldset>
 
 				<fieldset> 
 					<legend>Vilket/vilka spel har du spelat eller hört talas om?</legend>
 					<p>
-						<input type="checkbox" name="game" id="lol" checked /> <!--checkbox går att fylla i flera, i stort sett alla som visas. detta är automatiskt infyllt pga "checked"-->
+						<input type="checkbox" name="game" id="lol" value="lol" checked /> <!--checkbox går att fylla i flera, i stort sett alla som visas. detta är automatiskt infyllt pga "checked"-->
 						<label for="lol">League of Legends</label>					
 					</p>
 					<p>
-						<input type="checkbox" name="game" id="cs" />
+						<input type="checkbox" name="game" id="cs" value="cs" />
 						<label for="cs">Counter Strike</label>					
 					</p>
 					<p>
-						<input type="checkbox" name="game" id="dota" />
+						<input type="checkbox" name="game" id="dota" value="dota" />
 						<label for="dota">Dota 2</label>						
 					</p>
 					<p>
-						<input type="checkbox" name="game" id="cod" />
+						<input type="checkbox" name="game" id="cod" value="cod" />
 						<label for="cod">Call of Duty</label>						
 					</p>
 					<p>
-						<input type="checkbox" name="game" id="rl" />
+						<input type="checkbox" name="game" id="rl" value="rl" />
 						<label for="rl">Rocket League</label>						
 					</p>
 				</fieldset>
@@ -116,15 +116,15 @@
 				<fieldset>
 					<legend>Positiv eller negativ upplevelse till esport?</legend>
 					<p>
-						<input type="radio" name="exp" id="positive" />
+						<input type="radio" name="exp" id="positive" value="+" />
 						<label for="positive">Positiv</label>						
 					</p>
 					<p>
-						<input type="radio" name="exp" id="negative" />
+						<input type="radio" name="exp" id="negative" value="-" />
 						<label for="negative">Negativ</label>						
 					</p>
 					<p>
-						<input type="radio" name="exp" id="ingen" />
+						<input type="radio" name="exp" id="ingen" value="none" />
 						<label for="ingen">Ingen åsikt</label>					
 					</p>
 					<p>
@@ -138,8 +138,8 @@
 
 			<table> <!--tabell-->
 				<tr> <!-- skapar en rad i tabell -->
-					<th>Allmänt om</th> <!-- th är rubrik i tabeller-->
-					<th>League of Legends</th>
+					<th scope="col">Allmänt om</th> <!--th är rubrik i tabeller, scope ger specifikationer på rubriker i tabeller-->
+					<th scope="col">League of Legends</th>
 				</tr>
 				<tr> 
 					<td>Släpptes:</td> <!-- td är vanlig text i tabeller-->
